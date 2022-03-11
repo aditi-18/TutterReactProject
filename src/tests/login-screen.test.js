@@ -63,7 +63,9 @@ describe('www', () => {
     axios.get.mockImplementation(() =>
       Promise.resolve({ data: {users: MOCKED_USERS} }));
 
+    // eslint-disable-next-line testing-library/no-unnecessary-act
     act(() => {
+      // eslint-disable-next-line testing-library/no-render-in-setup
       render(<Tuiter/>)
     });
   });
@@ -74,9 +76,11 @@ describe('www', () => {
     axios.get.mockImplementation(() =>
       Promise.resolve({ data: {users: MOCKED_USERS} }));
 
+    // eslint-disable-next-line testing-library/no-unnecessary-act
     await act(async () => {
       // get all the links
       // const a = document.querySelectorAll("a#Login");
+      // eslint-disable-next-line testing-library/no-await-sync-query
       const a = await screen.getByText(/Login/i);
       // console.log(a);
       // click on the nth link
@@ -162,6 +166,7 @@ describe('createUser', () => {
 
   test('user service can insert new users in database', async () => {
 
+    // eslint-disable-next-line testing-library/no-unnecessary-act
     act(() => {
       render(
         <HashRouter>

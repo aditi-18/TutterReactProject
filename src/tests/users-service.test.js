@@ -3,6 +3,7 @@ import {
   deleteUsersByUsername, findAllUsers,
   findUserById
 } from "../services/users-service";
+//import * as services from "./services";
 
 describe('createUser', () => {
   // sample user to insert
@@ -12,9 +13,9 @@ describe('createUser', () => {
     email: 'ellenripley@aliens.com'
   };
 
-  // setup test before running test
+  //setup test before running test
   beforeAll(() => {
-    // remove any/all users to make sure we create it in the test
+   //remove any/all users to make sure we create it in the test
     return deleteUsersByUsername(ripley.username);
   })
 

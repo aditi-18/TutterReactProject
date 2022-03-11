@@ -4,6 +4,7 @@ import axios from "axios";
 
 const LOGIN_API = `${BASE_URL}/login`;
 const USERS_API = `${BASE_URL}/users`;
+const TUITS_API = `${BASE_URL}/tuits`;
 
 export const createUser = (user) =>
   axios.post(`${USERS_API}`, user)
@@ -25,10 +26,25 @@ export const deleteUsersByUsername = (username) =>
   axios.get(`${USERS_API}/username/${username}/delete`)
     .then(response => response.data);
 
-export const findUserByCredentials = (credentials) =>
-  axios.post(`${LOGIN_API}`, credentials)
-    .then(response => response.data);
+// export const findUserByCredentials = (credentials) =>
+  // axios.post(`${LOGIN_API}`, credentials)
+    // .then(response => response.data);
+// 
+    // export const findUserByCredentials = (credentials) =>
+    // axios.post(`${LOGIN_API}`, credentials)
+        // .then(response => response.data);
 
+export const findAllTuits = () =>
+    axios.get(TUITS_API)
+        .then(response => response.data);
+
+export const findTuitById = (tid) =>
+    axios.get(`${TUITS_API}/${tid}`)
+        .then(response => response.data);
+
+export const findTuitByUser = (uid) =>
+    axios.get(`${USERS_API}/${uid}/tuits`)
+        .then(response => response.data);
 const service = {
   findAllUsers
 }
