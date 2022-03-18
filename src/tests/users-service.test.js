@@ -1,9 +1,9 @@
 import {
-  createUser,
-  deleteUsersByUsername, findAllUsers,
-  findUserById
+  createUser,  deleteUsersByUsername, findAllUsers,findUserById
 } from "../services/users-service";
-//import * as services from "./services";
+/**
+* @jest-environment node
+*/
 
 describe('createUser', () => {
   // sample user to insert
