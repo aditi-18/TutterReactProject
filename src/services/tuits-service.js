@@ -3,6 +3,12 @@ import axios from "axios";
 const TUITS_API = "https://a2final.herokuapp.com/api/tuits";
 const USERS_API = "https://a2final.herokuapp.com/api/users";
 
+
+const api = axios.create({
+    withCredentials: true
+ });
+ 
+
 export const findAllTuits = () =>
     axios.get(TUITS_API)
         .then(response => response.data);
@@ -11,13 +17,23 @@ export const findTuitById = (tid) =>
     axios.get(`${TUITS_API}/${tid}`)
         .then(response => response.data);
 
-export const findTuitByUser = (uid) =>
-    axios.get(`${USERS_API}/${uid}/tuits`)
-        .then(response => response.data);
+export const findTuitByUser = (uid) =>///checkkkk
+        api.get(`${USERS_API}/${uid}/tuits`)
+          .then(response => response.data);
+      
+
+// export const findTuitByUser = (uid) =>
+    // axios.get(`${USERS_API}/${uid}/tuits`)
+        // .then(response => response.data);
+
+// export const createTuit = (uid, tuit) =>
+    // axios.post(`${USERS_API}/${uid}/tuits`, tuit)
+        // .then(response => response.data);
 
 export const createTuit = (uid, tuit) =>
-    axios.post(`${USERS_API}/${uid}/tuits`, tuit)
-        .then(response => response.data);
+api.post(`${USERS_API}/${uid}/tuits`, tuit)
+.then(response => response.data);
+      
 
 export const updateTuit = (tid, tuit) =>
     axios.post(`${TUITS_API}/${tid}`, tuit)
