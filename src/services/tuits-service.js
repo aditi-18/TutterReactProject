@@ -1,7 +1,7 @@
 import axios from "axios";
 
-const TUITS_API = "https://a2final.herokuapp.com/api/tuits";
-const USERS_API = "https://a2final.herokuapp.com/api/users";
+const TUITS_API = "https://a4final.herokuapp.com/api/tuits";
+const USERS_API = "https://a4final.herokuapp.com/api/users";
 
 
 const api = axios.create({
