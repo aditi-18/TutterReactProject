@@ -14,7 +14,7 @@ export const signup = (user) =>
    api.post(`${AUTH_API}/signup`, user)
        .then(response => response.data);
 
-       export const login = (user) =>
+export const login = (user) =>
        api.post(`${SECURITY_API}/login`, user)
            .then(response => response.data);
    
