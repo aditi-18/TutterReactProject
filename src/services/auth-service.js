@@ -3,7 +3,7 @@ import axios from "axios";
 
  const BASE_URL = "https://a4final.herokuapp.com";
 
-const AUTH_API = `${BASE_URL}/api/auth`
+
 const SECURITY_API = `${BASE_URL}/api/auth`;
 
 const api = axios.create({
@@ -11,7 +11,7 @@ const api = axios.create({
 });
 
 export const signup = (user) =>
-   api.post(`${AUTH_API}/signup`, user)
+   api.post(`${SECURITY_API}/signup`, user)
        .then(response => response.data);
 
 export const login = (user) =>
