@@ -1,3 +1,5 @@
+/* eslint-disable react/jsx-no-comment-textnodes */
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
 import "./navigation.css";
 import {useLocation, Link} from "react-router-dom";
@@ -16,6 +18,7 @@ function Navigation() {
     {label: 'Profile', icon: 'fa-user', path: '/profile'},
     {label: 'More', icon: 'fa-circle-ellipsis', path: '/more'},
     {label: 'Login', icon: 'fa-user', path: '/login'},
+    {label: 'Signup', icon: 'fa-user', path: '/signup'},
   ]
   return(
     <div className="ttr-navigation">
