@@ -26,13 +26,6 @@ export const deleteUsersByUsername = (username) =>
   axios.get(`${USERS_API}/username/${username}/delete`)
     .then(response => response.data);
 
-// export const findUserByCredentials = (credentials) =>
-  // axios.post(`${LOGIN_API}`, credentials)
-    // .then(response => response.data);
-// 
-    // export const findUserByCredentials = (credentials) =>
-    // axios.post(`${LOGIN_API}`, credentials)
-        // .then(response => response.data);
 
 export const findAllTuits = () =>
     axios.get(TUITS_API)

@@ -1,5 +1,5 @@
 import axios from "axios";
-const BASE_URL = "https://a4final.herokuapp.com/api";
+const BASE_URL = "https://a2final.herokuapp.com/api";
 // const BASE_URL = "http://localhost:4000";
 
 const LOGIN_API = `${BASE_URL}/login`;
