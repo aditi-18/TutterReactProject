@@ -11,16 +11,19 @@ const Home = () => {
   const [tuit, setTuit] = useState('');
   const userId = uid;
   const findTuits = () =>
+  console.log("Tuit1",tuits)
       service.findAllTuits()
         .then(tuits => setTuits(tuits));
-  useEffect(() => {
+    useEffect(() => {
     let isMounted = true;
     findTuits()
     return () => {isMounted = false;}
-  }, []);
+    }, []);
+    console.log("Tuit2",tuits)
   const createTuit = () =>
       service.createTuit('me', {tuit})
           .then(findTuits)
+  console.log("Tuit3",tuits)
   return(
     <div className="ttr-home">
       <div className="border border-bottom-0">
