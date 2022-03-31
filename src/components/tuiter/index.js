@@ -3,7 +3,7 @@ import React from "react";
 import Navigation from "../navigation";
 import WhatsHappening from "../whats-happening";
 import {BrowserRouter, Routes, Route, HashRouter} from "react-router-dom";
-import Home from "../home";
+import {Home} from "../home";
 import Bookmarks from "../bookmarks";
 import Profile from "../profile";
 import './tuiter.css'
@@ -15,7 +15,7 @@ import Lists from "../lists";
 import More from "../more";
 import {Login} from "../profile/login";
 import Signup from "../profile/signup";
-// 
+
 function Tuiter () {
   return(
     <HashRouter>
@@ -53,7 +53,7 @@ function Tuiter () {
   );
 }
 export default Tuiter;
-// 
+
 
 /* eslint-disable no-unused-vars */
 // import React from "react";
@@ -110,4 +110,4 @@ export default Tuiter;
 // }
 // export default Tuiter;
 // 
-//<Route path="/profile" element={<Profile/>}/>
+// 
