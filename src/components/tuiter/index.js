@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from "react";
 import Navigation from "../navigation";
 import WhatsHappening from "../whats-happening";
@@ -14,7 +15,6 @@ import Lists from "../lists";
 import More from "../more";
 import {Login} from "../profile/login";
 import Signup from "../profile/signup";
-import MyTuits from "../profile/my-tuits";
 
 function Tuiter () {
   return(

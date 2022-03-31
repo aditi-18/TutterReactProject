@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 // import React from "react";
 // import TuitStats from "./tuit-stats";
 // import TuitImage from "./tuit-image";

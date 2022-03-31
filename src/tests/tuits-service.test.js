@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { createTuit, deleteTuit,  findTuitById, findAllTuits,deleteTuitByContent } from "../services/tuits-service.js";
 import {
   createUser,deleteUsersByUsername, findAllUsers, findUserById} from "../services/users-service.js";
