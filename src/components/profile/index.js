@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 // /* eslint-disable jsx-a11y/alt-text */
 // /* eslint-disable no-unused-vars */
 // /* eslint-disable react-hooks/exhaustive-deps */
@@ -114,6 +115,7 @@ import * as service from "../../services/auth-service"
 import TuitsAndReplies from "./tuits-and-replies";
 import Media from "./media";
 import MyLikes from "./my-likes";
+
 const Profile = () => {
   const navigate = useNavigate();
   const location = useLocation();

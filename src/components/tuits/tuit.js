@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/alt-text */
+/* eslint-disable no-lone-blocks */
 // /* eslint-disable jsx-a11y/alt-text */
 import React from "react";
 import TuitStats from "./tuit-stats";

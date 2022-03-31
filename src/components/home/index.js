@@ -84,7 +84,7 @@ import * as service from "../../services/tuits-service";
 import {useEffect, useState} from "react";
 import {useLocation, useParams} from "react-router-dom";
 
-const Home = () => {
+export const Home = () => {
   const location = useLocation();
   const {uid} = useParams();
   const [tuits, setTuits] = useState([]);

@@ -1,7 +1,7 @@
 import './navigation.css';
 
 function Navigation() {
-  const links = [
+const links = [
     {label: 'Tuiter', icon: 'fa-square-t', href: 'tuiter.html'},
     {label: 'Home', icon: 'fa-home', href: 'home.html'},
     {label: 'Explore', icon: 'fa-hashtag', href: 'explore.html'},
