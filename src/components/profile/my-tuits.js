@@ -6,7 +6,9 @@ const MyTuits = () => {
     const [tuits, setTuits] = useState([]);
     const findMyTuits = () =>
         service.findTuitByUser("me")
-            .then(tuits => setTuits(tuits));
+            .then(tuits => {
+                return setTuits(tuits);
+            });
     useEffect(findMyTuits, []);
     return(
         <Tuits tuits={tuits}
