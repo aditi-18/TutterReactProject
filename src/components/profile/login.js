@@ -3,7 +3,7 @@ import {useNavigate} from "react-router-dom";
 import {useState} from "react";
 import * as service from "../../services/auth-service";
 
- const Login = () => {
+ export const Login = () => {
     const [loginUser, setLoginUser] = useState({});
     const navigate = useNavigate()
     const login = () =>
@@ -27,5 +27,3 @@ import * as service from "../../services/auth-service";
         </div>
     );
 };
-
-export default Login;
