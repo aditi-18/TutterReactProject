@@ -97,7 +97,9 @@ import {useLocation, useParams} from "react-router-dom";
   
     let isMounted = true;
     findTuits()
+    console.log(tuits)////////////
     return () => {isMounted = false;}
+ 
   }, []);
   console.log(tuits)////////////
   const createTuit = () =>
