@@ -10,11 +10,11 @@ const api = axios.create({
  
 
 export const findAllTuits = () =>
-    axios.get(TUITS_API)
+    api.get(TUITS_API)
         .then(response => response.data);
 
 export const findTuitById = (tid) =>
-    axios.get(`${TUITS_API}/${tid}`)
+    api.get(`${TUITS_API}/${tid}`)
         .then(response => response.data);
 
 export const findTuitByUser = (uid) =>///checkkkk
@@ -36,13 +36,13 @@ api.post(`${USERS_API}/${uid}/tuits`, tuit)
       
 
 export const updateTuit = (tid, tuit) =>
-    axios.post(`${TUITS_API}/${tid}`, tuit)
+    api.post(`${TUITS_API}/${tid}`, tuit)
         .then(response => response.data);
 
 export const deleteTuit = (tid) =>
-    axios.delete(`${TUITS_API}/${tid}`)
+    api.delete(`${TUITS_API}/${tid}`)
         .then(response => response.data);
 
 export const deleteTuitByContent = (tuit) =>
-    axios.get(`${TUITS_API}/${tuit}/delete`)
+    api.get(`${TUITS_API}/${tuit}/delete`)
         .then(response => response.data);
