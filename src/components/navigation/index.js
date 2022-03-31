@@ -15,7 +15,6 @@ function Navigation() {
     {label: 'Messages', icon: 'fa-envelope', path: '/messages'},
     {label: 'Bookmarks', icon: 'fa-bookmark', path: '/bookmarks'},
     {label: 'Lists', icon: 'fa-list', path: '/lists'},
-    {label: 'Profile', icon: 'fa-user', path: '/profile'},
     {label: 'Profile', icon: 'fa-user', path: '/profile/mytuits'},
     {label: 'More', icon: 'fa-circle-ellipsis', path: '/more'},
     {label: 'Login', icon: 'fa-user', path: '/login'},
