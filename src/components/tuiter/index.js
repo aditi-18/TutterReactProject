@@ -27,10 +27,10 @@ function Tuiter () {
             <Routes>
               <Route path="/login" element={<Login/>}/>
               <Route path="/signup" element={<Signup/>}/>
-              <Route path="/tuiter" element={<Home/>}/>
-              <Route path="/tuiter/:uid" element={<Home/>}/>
-              <Route path="/home" element={<Home/>}/>
-              <Route path="/home/:uid" element={<Home/>}/>
+              <Route path="/tuiter" element={Home}/>
+              <Route path="/tuiter/:uid" element={Home}/>
+              <Route path="/home" element={Home}/>
+              <Route path="/home/:uid" element={Home}/>
               <Route path="/explore" element={<Explore/>}/>
               <Route path="/notifications" element={<Notifications/>}/>
               <Route path="/messages" element={<Messages/>}/>
