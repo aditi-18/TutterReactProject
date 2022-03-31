@@ -94,10 +94,12 @@ import {useLocation, useParams} from "react-router-dom";
       service.findAllTuits()
         .then(tuits => setTuits(tuits));
   useEffect(() => {
+  
     let isMounted = true;
     findTuits()
     return () => {isMounted = false;}
   }, []);
+  console.log(tuits)////////////
   const createTuit = () =>
       service.createTuit('me', {tuit})
           .then(findTuits)
@@ -138,6 +140,7 @@ import {useLocation, useParams} from "react-router-dom";
       </div>
       <Tuits tuits={tuits}
              refreshTuits={findTuits}/>
+      
     </div>
   );
 };
