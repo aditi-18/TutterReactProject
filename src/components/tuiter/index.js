@@ -12,7 +12,7 @@
 // import Messages from "../messages";
 // import Lists from "../lists";
 // import More from "../more";
-// import {Login} from "../profile/login";
+// import Login from "../profile/login";
 // import Signup from "../profile/signup";
 
 // function Tuiter () {
@@ -25,7 +25,6 @@
 //           </div>
 //           <div className="ttr-center-column">
 //             <Routes>
-//               <Route path="/" element={<Home/>}/>
 //               <Route path="/login" element={<Login/>}/>
 //               <Route path="/signup" element={<Signup/>}/>
 //               <Route path="/tuiter" element={<Home/>}/>
@@ -40,6 +39,7 @@
 //               <Route path="/profile/*" element={<Profile/>}/>
 //               <Route path="/profile/edit" element={<EditProfile/>}/>
 //               <Route path="/more" element={<More/>}/>
+//               <Route path="/" element={<Home/>}/>
 //             </Routes>
 //           </div>
 //           <div className="ttr-right-column">
@@ -82,10 +82,10 @@ function Tuiter () {
             <Routes>
               <Route path="/login" element={<Login/>}/>
               <Route path="/signup" element={<Signup/>}/>
-              <Route path="/tuiter" element={<Home/>}/>
-              <Route path="/tuiter/:uid" element={<Home/>}/>
-              <Route path="/home" element={<Home/>}/>
-              <Route path="/home/:uid" element={<Home/>}/>
+              <Route path="/tuiter" element={Home}/>
+              <Route path="/tuiter/:uid" element={Home}/>
+              <Route path="/home" element={Home}/>
+              <Route path="/home/:uid" element={Home}/>
               <Route path="/explore" element={<Explore/>}/>
               <Route path="/notifications" element={<Notifications/>}/>
               <Route path="/messages" element={<Messages/>}/>
@@ -94,7 +94,7 @@ function Tuiter () {
               <Route path="/profile/*" element={<Profile/>}/>
               <Route path="/profile/edit" element={<EditProfile/>}/>
               <Route path="/more" element={<More/>}/>
-              <Route path="/" element={<Home/>}/>
+              <Route path="/" element={Home}/>
             </Routes>
           </div>
           <div className="ttr-right-column">
