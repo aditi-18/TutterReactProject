@@ -28,4 +28,4 @@ import * as service from "../../services/auth-service";
     );
 };
 
-export default Login
+export default Login;
