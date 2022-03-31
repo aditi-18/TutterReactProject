@@ -2,12 +2,13 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, {useEffect, useState} from "react";
-import MyTuits from "./my-tuits";
+
 import {HashRouter, Link, Route, Routes, useNavigate, useLocation} from "react-router-dom";
 import * as service from "../../services/auth-service"
 import TuitsAndReplies from "./tuits-and-replies";
 import Media from "./media";
 import MyLikes from "./my-likes";
+import MyTuits from "./my-tuits";
 const Profile = () => {
   
   const navigate = useNavigate();
