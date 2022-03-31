@@ -39,7 +39,7 @@ function Tuiter () {
               <Route path="/profile/*" element={<Profile/>}/>
               <Route path="/profile/edit" element={<EditProfile/>}/>
               <Route path="/more" element={<More/>}/>
-              <Route path="/" element={<Home/>}/>
+              <Route path="/" element={Home}/>
             </Routes>
           </div>
           <div className="ttr-right-column">
