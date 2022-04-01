@@ -75,29 +75,32 @@ import React from "react";
 // export default TuitStats;
 
 
-
 const TuitStats = ({tuit, likeTuit = () => {}}) => {
     return (
       <div className="row mt-2">
         <div className="col">
           <i className="far fa-message me-1"></i>
-          {tuit.stats && tuit.stats.replies}
+          {tuit.stats &&
+          <span className="ttr-stats-replies">{tuit.stats.replies}</span>
+          }
         </div>
         <div className="col">
           <i className="far fa-retweet me-1"></i>
-          {tuit.stats && tuit.stats.retuits}
+          {tuit.stats &&
+          <span className="ttr-stats-retuits">{tuit.stats.retuits}</span>
+          }
         </div>
         <div className="col">
-          <span onClick={() => likeTuit(tuit)}>
+          <span className="ttr-like-tuit-click" onClick={() => likeTuit(tuit)}>
               {
                 tuit.stats && tuit.stats.likes && tuit.stats.likes > 0 &&
-                  <i className="fas fa-thumbs-up me-1" style={{color: 'red'}}></i>
+                  <i className="fas fa-heart me-1" style={{color: 'red'}}></i>
               }
               {
                 tuit.stats && tuit.stats.likes && tuit.stats.likes <= 0 &&
-                  <i className="far fa-thumbs-up me-1"></i>
+                  <i className="far fa-heart me-1"></i>
               }
-            {tuit.stats && tuit.stats.likes}
+            <span className="ttr-stats-likes">{tuit.stats && tuit.stats.likes}</span>
           </span>
         </div>
         <div className="col">
