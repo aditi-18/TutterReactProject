@@ -30,6 +30,12 @@ const Tuits = ({tuits = [], refreshTuits}) => {
         likesService.userLikesTuit("me", tuit._id)
             .then(refreshTuits)
             .catch(e => alert(e))
+    
+            const dislikeTuit = (tuit) =>
+            likesService.userDislikesTuit("me", tuit._id)
+                .then(refreshTuits)
+                .catch(e => alert(e))
+
     const deleteTuit = (tid) =>
         service.deleteTuit(tid)
             .then(refreshTuits);
@@ -42,6 +48,7 @@ const Tuits = ({tuits = [], refreshTuits}) => {
                   <Tuit key={tuit._id}
                         deleteTuit={deleteTuit}
                         likeTuit={likeTuit}
+                        dislikeTuit={dislikeTuit}
                         tuit={tuit}/>)
             }
           </ul>
