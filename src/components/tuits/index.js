@@ -5,16 +5,16 @@ import './tuits.css';
 import Tuit from "./tuit";
 import * as likesService from "../../services/likes-service";
 import * as service from "../../services/tuits-service";
+import * as dislikeService from "../../services/dislike-service";
+
 const Tuits = ({tuits = [], refreshTuits}) => {
     const likeTuit = (tuit) =>
         likesService.userLikesTuit("me", tuit._id)
             .then(refreshTuits)
-            .catch(e => alert(e))
-    
-            const dislikeTuit = (tuit) =>
-            likesService.userDislikesTuit("me", tuit._id)
-                .then(refreshTuits)
-                .catch(e => alert(e))
+            .catch(e => alert(e));
+          
+      const dislikeTuit = (tuit) => dislikeService.userTogglesTuitDislikes("me", tuit._id)
+            .then(refreshTuits).catch(e => alert(e));
 
     const deleteTuit = (tid) =>
         service.deleteTuit(tid)
