@@ -89,7 +89,7 @@ const Profile = () => {
                 Media</Link>
             </li>
             <li className="nav-item">
-              <Link to="/profile/mylikes"
+              <Link to="/profile/likes"
                     className={`nav-link ${location.pathname.indexOf('my-likes') >= 0 ? 'active':''}`}>
                 Likes</Link>
             </li>
