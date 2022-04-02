@@ -88,11 +88,11 @@ const Profile = () => {
                     className={`nav-link ${location.pathname.indexOf('media') >= 0 ? 'active':''}`}>
                 Mediiaaa</Link>
             </li>
-            <li className="nav-item">
-            <Link to="/profile/dislikes"
-                   className={`nav-link ${location.pathname.indexOf('dislikes') >= 0 ? 'active':''}`}>
-             Disikes</Link>
-            </li>
+            {/* <li className="nav-item"> */}
+            {/* <Link to="/profile/dislikes" */}
+                  //  className={`nav-link ${location.pathname.indexOf('dislikes') >= 0 ? 'active':''}`}>
+             {/* Disikes</Link> */}
+            {/* </li> */}
             <li className="nav-item">
               <Link to="/profile/mylikes"
                     className={`nav-link ${location.pathname.indexOf('likes') >= 0 ? 'active':''}`}>
