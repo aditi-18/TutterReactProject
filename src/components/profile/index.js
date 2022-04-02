@@ -98,11 +98,6 @@ const Profile = () => {
                     className={`nav-link ${location.pathname.indexOf('likes') >= 0 ? 'active':''}`}>
                 Likes</Link>
             </li>
-            
-            
-            
-            
-            
           </ul>
         </div>
       </div>
