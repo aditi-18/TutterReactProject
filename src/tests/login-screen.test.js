@@ -1,3 +1,4 @@
+/* eslint-disable testing-library/no-unnecessary-act */
 import axios from 'axios';
 import {
   createUser,
@@ -57,15 +58,13 @@ describe('fff', () => {
     });
   });
 })
-
+// broken
 describe('www', () => {
   beforeEach(() => {
     axios.get.mockImplementation(() =>
       Promise.resolve({ data: {users: MOCKED_USERS} }));
 
-    // eslint-disable-next-line testing-library/no-unnecessary-act
     act(() => {
-      // eslint-disable-next-line testing-library/no-render-in-setup
       render(<Tuiter/>)
     });
   });
@@ -76,11 +75,9 @@ describe('www', () => {
     axios.get.mockImplementation(() =>
       Promise.resolve({ data: {users: MOCKED_USERS} }));
 
-    // eslint-disable-next-line testing-library/no-unnecessary-act
     await act(async () => {
       // get all the links
       // const a = document.querySelectorAll("a#Login");
-      // eslint-disable-next-line testing-library/no-await-sync-query
       const a = await screen.getByText(/Login/i);
       // console.log(a);
       // click on the nth link
@@ -92,54 +89,6 @@ describe('www', () => {
       const linkElement = screen.getByText(/bob/i);
       expect(linkElement).toBeInTheDocument();
     });
-
-
-    // act(() => {
-    //   const loginLink = screen.getByText(/Login/i);
-    //   console.log(loginLink)
-    //   // // get all the links
-    //   // const a = document.querySelectorAll("a");
-    //   // // click on the nth link
-    //   // fireEvent.click(a[nth]);
-    // })
-
-    // ;
-    // await waitFor(() => {
-    //   const linkElement = screen.getByText(/ellenripley/i);
-    //   expect(linkElement).toBeInTheDocument();
-    // });
-
-    // expect(await screen.getByText(/ellen_ripley/i)).toBeInTheDocument();
-
-    // const {container} = render(
-    //   <HashRouter>
-    //     <Login/>
-    //   </HashRouter>
-    // );
-
-
-    // act(() => {
-    //   render(
-    //     <HashRouter>
-    //       <Login/>
-    //     </HashRouter>
-    //   )
-    // });
-    //
-    // const a = document.querySelectorAll("a");
-    //
-    //   console.log(a);
-
-    // await waitFor(async () => {
-    //   await screen.getByText(/ellen_ripley/i);
-    //   expect(user).toBeInTheDocument();
-    // }, {timeout: 5000});
-
-    // screen.getByText(/ellen_ripley/i)
-    //   .then(ddd => {
-    //     console.log(ddd)
-    //     // expect(user).toBeInTheDocument();
-    //   })
   });
 });
 
@@ -166,7 +115,6 @@ describe('createUser', () => {
 
   test('user service can insert new users in database', async () => {
 
-    // eslint-disable-next-line testing-library/no-unnecessary-act
     act(() => {
       render(
         <HashRouter>
